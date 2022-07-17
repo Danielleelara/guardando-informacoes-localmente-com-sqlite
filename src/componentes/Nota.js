@@ -6,7 +6,7 @@ export default function Nota({item, setNotaSelecionada}) {
   const estilos = styleFunction(categorias[item.categoria])
   
   return (
-    <TouchableOpacity onPress={setNotaSelecionada(item)} style={estilos.cartao}>
+    <TouchableOpacity onPress={()=>setNotaSelecionada(item)} style={estilos.cartao}>
       <Text style={estilos.titulo}>{item.titulo}</Text>
       <Text style={estilos.categoria}>{item.categoria}</Text>
       <Text style={estilos.texto} numberOfLines={5}>{item.texto}</Text>
